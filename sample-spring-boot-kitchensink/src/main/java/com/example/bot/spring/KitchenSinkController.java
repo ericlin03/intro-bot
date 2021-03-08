@@ -601,11 +601,11 @@ public class KitchenSinkController {
                 this.replyText(
                         replyToken,
                         "嗨，這是林劭宇的自我介紹機器人，可以輸入以下文字或是點選圖文選單來更加了解我哦!\n" + 
-                        "profile: 簡介📖\n" +
-                        "github: 我的github site💻\n" + 
-                        "experience: 我的工作經驗💼\n" + 
-                        "skills: 我會的技能🛠\n" + 
-                        "interests: 平常的興趣🏀"
+                        "profile: 簡介\n" +
+                        "github: 我的github site\n" + 
+                        "experience: 我的工作經驗\n" + 
+                        "skills: 我會的技能\n" + 
+                        "interests: 平常的興趣"
                 );
                 break;
         }
