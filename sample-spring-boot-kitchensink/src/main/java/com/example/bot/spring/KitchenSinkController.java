@@ -347,50 +347,15 @@ public class KitchenSinkController {
             case "profile": {
                 log.info("Invoking 'profile' command: source:{}",
                          event.getSource());
-                final String userId = event.getSource().getUserId();
-                if (userId != null) {
-                    if (event.getSource() instanceof GroupSource) {
-                        lineMessagingClient
-                                .getGroupMemberProfile(((GroupSource) event.getSource()).getGroupId(), userId)
-                                .whenComplete((profile, throwable) -> {
-                                    if (throwable != null) {
-                                        this.replyText(replyToken, throwable.getMessage());
-                                        return;
-                                    }
-
-                                    this.reply(
-                                            replyToken,
-                                            Arrays.asList(new TextMessage("(from group)"),
-                                                          new TextMessage(
-                                                                  "您好，" + profile.getDisplayName() + "！\n" + 
-                                                                  "歡迎"),
-                                                          new ImageMessage(profile.getPictureUrl(),
-                                                                           profile.getPictureUrl()))
-                                    );
-                                });
-                    } else {
-                        lineMessagingClient
-                                .getProfile(userId)
-                                .whenComplete((profile, throwable) -> {
-                                    if (throwable != null) {
-                                        this.replyText(replyToken, throwable.getMessage());
-                                        return;
-                                    }
-
-                                    this.reply(
-                                            replyToken,
-                                            Arrays.asList(new TextMessage(
-                                                                  "您好，" + profile.getDisplayName() + "！\n" + 
-                                                                  "歡迎"),
-                                                          new TextMessage("Status message: "
-                                                                          + profile.getStatusMessage()))
-                                    );
-
-                                });
-                    }
-                } else {
-                    this.replyText(replyToken, "Bot can't use profile API without user ID");
-                }
+                this.replyText(
+                        replyToken,
+                        Arrays.asList(new TextMessage(
+                                                "我是林劭宇，目前就讀於國立陽明交通大學資訊管理研究所碩士班，研究室的方向是分散式系統。\n" + 
+                                                "最近做的專案是參賽台積電與微軟合辦的careerhack，透過兩天的時間利用Azure的服務開發出一個聊天機器人，
+                                                這個機器人主要是推薦美食，而且可以讓使用者可以將餐廳加到我的最愛，也會依照使用者的喜好做個人化的推薦，
+                                                其中我負責Azure環境的部署、版本控制、資料庫與CI/CD的部分。"),
+                        );
+                );
                 break;
             }
             case "bye": {
