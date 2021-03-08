@@ -14,16 +14,22 @@
  * under the License.
  */
 
-include 'line-bot-api-client'
-include 'line-bot-model'
-include 'line-bot-servlet'
-include 'line-bot-spring-boot'
-include 'line-bot-cli'
-include 'line-bot-parser'
+package com.example.bot.spring;
 
-// samples
-include 'sample-spring-boot-echo'
-include 'sample-spring-boot-echo-kotlin'
-include 'sample-spring-boot-kitchensink'
-include 'sample-manage-audience'
-include 'line-intro-bot'
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class KitchenSinkApplication {
+    static Path downloadedContentDir;
+
+    public static void main(String[] args) throws IOException {
+        downloadedContentDir = Files.createTempDirectory("line-bot");
+        SpringApplication.run(KitchenSinkApplication.class, args);
+    }
+
+}

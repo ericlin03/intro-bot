@@ -14,16 +14,10 @@
  * under the License.
  */
 
-include 'line-bot-api-client'
-include 'line-bot-model'
-include 'line-bot-servlet'
-include 'line-bot-spring-boot'
-include 'line-bot-cli'
-include 'line-bot-parser'
+apply plugin: 'org.springframework.boot'
 
-// samples
-include 'sample-spring-boot-echo'
-include 'sample-spring-boot-echo-kotlin'
-include 'sample-spring-boot-kitchensink'
-include 'sample-manage-audience'
-include 'line-intro-bot'
+dependencies {
+    implementation project(':line-bot-spring-boot')
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation 'com.google.guava:guava'
+}
