@@ -353,7 +353,9 @@ public class KitchenSinkController {
                                                 "我是林劭宇，目前就讀於國立陽明交通大學資訊管理研究所碩士班，研究室的方向是分散式系統。\n" + 
                                                 "最近做的專案是參賽台積電與微軟合辦的careerhack，透過兩天的時間利用Azure的服務開發出一個聊天機器人，
                                                 這個機器人主要是推薦美食，而且可以讓使用者可以將餐廳加到我的最愛，也會依照使用者的喜好做個人化的推薦，
-                                                其中我負責Azure環境的部署、版本控制、資料庫與CI/CD的部分。"),
+                                                其中我負責Azure環境的部署、版本控制、資料庫與CI/CD的部分。\n" + 
+                                                "我的個性很悶騷，一開始可能看起來會比較難親近，但彼此熟悉之後會發現其實我很外向，喜歡針對一件事的不同
+                                                面向思考，雖然有時讓我陷入死胡同、自我懷疑，但也因為這個特質，讓我有更多的機會可以看到別人沒看到的地方。"),
                         );
                 );
                 break;
@@ -600,7 +602,12 @@ public class KitchenSinkController {
                 log.info("Returns echo message {}: {}", replyToken, text);
                 this.replyText(
                         replyToken,
-                        text
+                        "嗨，這是林劭宇的自我介紹機器人，可以輸入以下文字或是點選圖文選單來更加了解我哦!\n" + 
+                        "profile: 簡介📖\n" +
+                        "github: 我的github site💻\n" + 
+                        "experience: 我的工作經驗💼\n" + 
+                        "skills: 我會的技能🛠\n" + 
+                        "interests: 平常的興趣🏀"
                 );
                 break;
         }
