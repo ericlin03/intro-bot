@@ -345,7 +345,7 @@ public class KitchenSinkController {
                  content.getEmojis());
         switch (text) {
             case "profile": {
-                String replyText = "Hi, I am Eric Lin. I am majoring Information Management in National Yang Ming Chiao Tung University. My research is more like distributed system.\n The latest project I joined is a chatbot. This competition was held by TSMC and Microsoft. We used Azure Services to build a food chatbot in two days.";
+                String replyText = "Hi, I am Eric Lin. I am majoring Information Management in National Yang Ming Chiao Tung University. My research is more like distributed system.\nThe latest project I joined is a chatbot. This competition was held by TSMC and Microsoft. We used Azure Services to build a food chatbot in two days.";
                 log.info("Invoking 'profile' command: source:{}",
                          event.getSource());
                 this.replyText(
@@ -599,7 +599,7 @@ public class KitchenSinkController {
                                       .build());
                 break;
             default:
-                String replyText = "Hi, this bot is Eric introduction chatbot. You can input below texts or click rich menu to know more about me.\n profile: my introduction\n github: my github site\n experience: my work experience\n skills: what I can do\n interest: what I like to do";
+                String replyText = "Hi, this bot is Eric introduction chatbot. You can input below texts or click rich menu to know more about me.\nprofile: my introduction📜\ngithub: my github site💻\nexperience: my work experience💼\nskills: what I can do🛠\ninterest: what I like to do🏀";
                 log.info("Returns echo message {}: {}", replyToken, text);
                 this.replyText(
                         replyToken,
