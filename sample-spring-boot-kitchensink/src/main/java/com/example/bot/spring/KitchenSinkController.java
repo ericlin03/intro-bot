@@ -345,13 +345,12 @@ public class KitchenSinkController {
                  content.getEmojis());
         switch (text) {
             case "profile": {
+                String replyText = "Hi, I am Eric Lin. I am majoring Information Management in National Yang Ming Chiao Tung University. My research is more like distributed system.\n The latest project I joined is a chatbot. This competition was held by TSMC and Microsoft. We used Azure Services to build a food chatbot in two days."
                 log.info("Invoking 'profile' command: source:{}",
                          event.getSource());
                 this.replyText(
                         replyToken,
-                        "Hi, I am Eric Lin. I am majoring Information Management in National Yang Ming Chiao Tung University. My research is more like distributed system.\n
-                        The latest project I joined is a chatbot. This competition was held by TSMC and Microsoft. We used Azure Services to build a food chatbot in two days. 
-                        "
+                        replyText
                         // "我是林劭宇，目前就讀於國立陽明交通大學資訊管理研究所碩士班，研究室的方向是分散式系統。\n
                         // 最近做的專案是參賽台積電與微軟合辦的careerhack，透過兩天的時間利用Azure的服務開發出一個聊天機器人，
                         // 這個機器人主要是推薦美食，而且可以讓使用者可以將餐廳加到我的最愛，也會依照使用者的喜好做個人化的推薦，
@@ -600,15 +599,11 @@ public class KitchenSinkController {
                                       .build());
                 break;
             default:
+                String replyText = "Hi, this bot is Eric introduction chatbot. You can input below texts or click rich menu to know more about me.\n profile: my introduction\n github: my github site\n experience: my work experience\n skills: what I can do\n interest: what I like to do"
                 log.info("Returns echo message {}: {}", replyToken, text);
                 this.replyText(
                         replyToken,
-                        "Hi, this bot is Eric introduction chatbot. You can input below texts or click rich menu to know more about me.\n
-                        profile: my introduction\n
-                        github: my github site\n
-                        experience: my work experience\n
-                        skills: what I can do\n
-                        interest: what I like to do"
+                        replyText
                         // "嗨，這是林劭宇的自我介紹機器人，可以輸入以下文字或是點選圖文選單來更加了解我哦!\n
                         // profile: 簡介\n
                         // github: 我的github site\n
