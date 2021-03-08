@@ -362,7 +362,8 @@ public class KitchenSinkController {
                                             replyToken,
                                             Arrays.asList(new TextMessage("(from group)"),
                                                           new TextMessage(
-                                                                  "Display name: " + profile.getDisplayName()),
+                                                                  "您好，" + profile.getDisplayName() + "！\n" + 
+                                                                  "歡迎"),
                                                           new ImageMessage(profile.getPictureUrl(),
                                                                            profile.getPictureUrl()))
                                     );
