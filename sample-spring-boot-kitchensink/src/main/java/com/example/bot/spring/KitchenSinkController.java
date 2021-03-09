@@ -581,7 +581,7 @@ public class KitchenSinkController {
             }
             case "git test": {
                 // String replyText = "https://github.com/ericlin03";
-                URI imageUrl = createUri("/static/icon/github.jpg");
+                URI imageUrl = createUri("/static/buttons/9919.jpg");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
                         imageUrl,
                         "My github site",
@@ -597,7 +597,7 @@ public class KitchenSinkController {
                                 // new MessageAction("Say message",
                                 //                   "Rice=米")
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("github.com/ericlin03", buttonsTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("My github: https://github.com/ericlin03", buttonsTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
