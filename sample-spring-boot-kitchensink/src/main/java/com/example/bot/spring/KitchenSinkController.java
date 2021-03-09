@@ -501,18 +501,18 @@ public class KitchenSinkController {
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(imageUrl,
-                                                        new URIAction("Goto line.me",
-                                                                      URI.create("https://line.me"), null)
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                                        new MessageAction("Say message",
-                                                                          "Rice=米")
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                                        new PostbackAction("言 hello2",
-                                                                           "hello こんにちは",
-                                                                           "hello こんにちは")
+                                                        new URIAction("Go to my github site",
+                                                                      URI.create("https://github.com/ericlin03"), null)
                                 )
+                                // new ImageCarouselColumn(imageUrl,
+                                //                         new MessageAction("Say message",
+                                //                                           "Rice=米")
+                                // ),
+                                // new ImageCarouselColumn(imageUrl,
+                                //                         new PostbackAction("言 hello2",
+                                //                                            "hello こんにちは",
+                                //                                            "hello こんにちは")
+                                // )
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
                                                                       imageCarouselTemplate);
@@ -598,9 +598,32 @@ public class KitchenSinkController {
                                                     .build())
                                       .build());
                 break;
+            case "github" || "Github":
+                URI imageUrl = createUri("/static/icon/github.png");
+                // this.reply(replyToken, imageUrl);
+                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                        Arrays.asList(
+                                new ImageCarouselColumn(imageUrl,
+                                                        new URIAction("Goto line.me",
+                                                                      URI.create("https://line.me"), null)
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                                        new MessageAction("Say message",
+                                                                          "Rice=米")
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                                        new PostbackAction("言 hello2",
+                                                                           "hello こんにちは",
+                                                                           "hello こんにちは")
+                                )
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
+                                                                      imageCarouselTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
             default:
                 String replyText = "Hi, this bot is Eric introduction chatbot. You can input below texts or click rich menu to know more about me.\nprofile: my introduction📜\ngithub: my github site💻\nexperience: my work experience💼\nskills: what I can do🛠\ninterest: what I like to do🏀";
-                log.info("Returns echo message {}: {}", replyToken, text);
+                // log.info("Returns echo message {}: {}", replyToken, text);
                 this.replyText(
                         replyToken,
                         replyText
