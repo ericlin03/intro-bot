@@ -580,22 +580,25 @@ public class KitchenSinkController {
                 break;
             }
             case "test git": {
-                String replyText = "https://github.com/ericlin03";
-                // URI imageUrl = createUri("/static/buttons/9919.png");
-                // ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
-                //         Arrays.asList(
-                //                 new ImageCarouselColumn(imageUrl,
-                //                                         new URIAction("Go to my github site",
-                //                                                       URI.create("https://github.com/ericlin03"), null)
-                //                 ),
-                //                 new ImageCarouselColumn(imageUrl,
-                //                                         new URIAction("Go to my github site",
-                //                                                       URI.create("https://github.com/ericlin03"), null)
-                //                 )
-                //         ));
-                // TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
-                //                                                       imageCarouselTemplate);
-                this.reply(replyToken, "https:%/%/github.com%/ericlin03");
+                // String replyText = "https://github.com/ericlin03";
+                URI imageUrl = createUri("/static/buttons/9919.jpg");
+                ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
+                        imageUrl,
+                        "My button sample",
+                        "Hello, my button",
+                        Arrays.asList(
+                                new URIAction("Go to line.me",
+                                              URI.create("https://github.com/ericlin03"), null)
+                                // new PostbackAction("Say hello1",
+                                //                    "hello こんにちは"),
+                                // new PostbackAction("言 hello2",
+                                //                    "hello こんにちは",
+                                //                    "hello こんにちは"),
+                                // new MessageAction("Say message",
+                                //                   "Rice=米")
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("Button alt text", buttonsTemplate);
+                this.reply(replyToken, templateMessage);
                 break;
             }
             // case "flex": {
