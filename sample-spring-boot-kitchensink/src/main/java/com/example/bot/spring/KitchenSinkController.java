@@ -603,7 +603,6 @@ public class KitchenSinkController {
                 // this.reply(replyToken, imageUrl);
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
-                                Arrays.asList(
                                 new ImageCarouselColumn(imageUrl,
                                                         new URIAction("Go to my github site",
                                                                       URI.create("https://github.com/ericlin03"), null)
@@ -618,7 +617,6 @@ public class KitchenSinkController {
                                 //                                            "hello こんにちは")
                                 // )
                         ));
-                )
                 TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
                                                                       imageCarouselTemplate);
                 this.reply(replyToken, templateMessage);
