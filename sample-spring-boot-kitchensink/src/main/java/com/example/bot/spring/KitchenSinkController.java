@@ -618,6 +618,7 @@ public class KitchenSinkController {
                                 //                                            "hello こんにちは")
                                 // )
                         ));
+                )
                 TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
                                                                       imageCarouselTemplate);
                 this.reply(replyToken, templateMessage);
