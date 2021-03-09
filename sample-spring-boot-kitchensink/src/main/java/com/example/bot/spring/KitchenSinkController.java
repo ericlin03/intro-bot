@@ -600,7 +600,7 @@ public class KitchenSinkController {
                 URI fju = createUri("/static/buttons/FJU.jpg");
                 // String CTBC_text = "Application Security Intern\n● Responsible for the black- and white-box testing of over 20 systems\n● Built environment of white-box testing, imported policy package\n● Updated policy package of black-box testing, recorded scripts of black-box testing\n● Pre-reviewed vulnerability of systems before online";
                 // String microsoft_text = "2021 Microsoft & TSMC Careerhack\n● Be shortlisted for the final contest and built a online chatbot with Azure\n● Responsible for version control, Database, and application deployment";
-                // String fju_text = "Blockchain Ticketing Platform and Payment Project\n● Built private blockchain with Ethereum\n● Wrote smart contract and deployed on blockchain with Solidity\n● Wrote API for website and blockchain with JavaScript";
+                String fju_text = "Blockchain Ticketing Platform and Payment Project\n● Built private blockchain with Ethereum\n● Wrote smart contract and deployed on blockchain with Solidity\n● Wrote API for website and blockchain with JavaScript";
                 
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
@@ -620,10 +620,8 @@ public class KitchenSinkController {
                                 ),
                                 new ImageCarouselColumn(fju,
                                                         new MessageAction("FJU project",
-                                                                          "Blockchain Ticketing Platform and Payment Project\n● Built private blockchain with Ethereum\n● Wrote smart contract and deployed on blockchain with Solidity\n● Wrote API for website and blockchain with JavaScript")
-                                                        // new PostbackAction("FJU final project",
-                                                        //                    "Ticketing Platform",
-                                                        //                    "Blockchain Ticketing Platform and Payment Project\n● Built private blockchain with Ethereum\n● Wrote smart contract and deployed on blockchain with Solidity\n● Wrote API for website and blockchain with JavaScript")
+                                                                          fju_text
+                                                                        //   "Blockchain Ticketing Platform and Payment Project\n● Built private blockchain with Ethereum\n● Wrote smart contract and deployed on blockchain with Solidity\n● Wrote API for website and blockchain with JavaScript")
                                 )
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("My work and project experience",
@@ -645,7 +643,7 @@ public class KitchenSinkController {
             //                true);
             //     break;
             // }
-            default:
+            case "how to use": {
                 String replyText = "Hi, this bot is Eric introduction chatbot. You can input below texts or click rich menu to know more about me.\nprofile: my introduction📜\ngithub: my github site💻\nexperience: my work experience💼\nskills: what I can do🛠\ninterest: what I like to do🏀";
                 // log.info("Returns echo message {}: {}", replyToken, text);
                 this.replyText(
@@ -659,6 +657,7 @@ public class KitchenSinkController {
                         // interests: 平常的興趣"
                 );
                 break;
+            }  
         }
     }
 
