@@ -580,7 +580,6 @@ public class KitchenSinkController {
                 break;
             }
             case "test git": {
-                
                 String replyText = "https://github.com/ericlin03";
                 // URI imageUrl = createUri("/static/buttons/9919.png");
                 // ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
@@ -596,7 +595,7 @@ public class KitchenSinkController {
                 //         ));
                 // TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
                 //                                                       imageCarouselTemplate);
-                this.reply(replyToken, replyText);
+                this.reply(replyToken, "https://github.com/ericlin03");
                 break;
             }
             // case "flex": {
