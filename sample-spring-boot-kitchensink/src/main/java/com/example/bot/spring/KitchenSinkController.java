@@ -519,7 +519,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "imagemap":
+            case "imagemap": {
                 //            final String baseUrl,
                 //            final String altText,
                 //            final ImagemapBaseSize imagemapBaseSize,
@@ -549,7 +549,8 @@ public class KitchenSinkController {
                         ))
                         .build());
                 break;
-            case "imagemap_video":
+            }
+            case "imagemap_video": {
                 this.reply(replyToken, ImagemapMessage
                         .builder()
                         .baseUrl(createUri("/static/imagemap_video"))
@@ -577,18 +578,22 @@ public class KitchenSinkController {
                         ))
                         .build());
                 break;
-            case "flex":
+            }
+            case "flex": {
                 this.reply(replyToken, new ExampleFlexMessageSupplier().get());
                 break;
-            case "quickreply":
+            }
+            case "quickreply": {
                 this.reply(replyToken, new MessageWithQuickReplySupplier().get());
                 break;
-            case "no_notify":
+            }
+            case "no_notify": {
                 this.reply(replyToken,
                            singletonList(new TextMessage("This message is send without a push notification")),
                            true);
                 break;
-            case "icon":
+            }
+            case "icon": {
                 this.reply(replyToken,
                            TextMessage.builder()
                                       .text("Hello, I'm cat! Meow~")
@@ -598,9 +603,9 @@ public class KitchenSinkController {
                                                     .build())
                                       .build());
                 break;
-            case "github":
-                URI imageUrl = createUri("/static/icon/github.png");
-                // this.reply(replyToken, imageUrl);
+            }
+            case "github": {
+                URI imageUrl = createUri("/static/icon/github.jpg");
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(imageUrl,
@@ -611,16 +616,12 @@ public class KitchenSinkController {
                                                         new MessageAction("Say message",
                                                                           "Rice=米")
                                 )
-                                // new ImageCarouselColumn(imageUrl,
-                                //                         new PostbackAction("言 hello2",
-                                //                                            "hello こんにちは",
-                                //                                            "hello こんにちは")
-                                // )
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
                                                                       imageCarouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
+            }
             default:
                 String replyText = "Hi, this bot is Eric introduction chatbot. You can input below texts or click rich menu to know more about me.\nprofile: my introduction📜\ngithub: my github site💻\nexperience: my work experience💼\nskills: what I can do🛠\ninterest: what I like to do🏀";
                 // log.info("Returns echo message {}: {}", replyToken, text);
