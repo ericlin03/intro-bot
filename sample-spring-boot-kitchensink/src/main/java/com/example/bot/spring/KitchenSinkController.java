@@ -606,11 +606,11 @@ public class KitchenSinkController {
                                 new ImageCarouselColumn(imageUrl,
                                                         new URIAction("Go to my github site",
                                                                       URI.create("https://github.com/ericlin03"), null)
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                                        new MessageAction("Say message",
+                                                                          "Rice=米")
                                 )
-                                // new ImageCarouselColumn(imageUrl,
-                                //                         new MessageAction("Say message",
-                                //                                           "Rice=米")
-                                // ),
                                 // new ImageCarouselColumn(imageUrl,
                                 //                         new PostbackAction("言 hello2",
                                 //                                            "hello こんにちは",
