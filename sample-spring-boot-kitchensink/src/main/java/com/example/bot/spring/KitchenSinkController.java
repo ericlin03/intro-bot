@@ -579,15 +579,15 @@ public class KitchenSinkController {
                         .build());
                 break;
             }
-            case "test git": {
+            case "github": {
                 // String replyText = "https://github.com/ericlin03";
-                URI imageUrl = createUri("/static/buttons/9919.jpg");
+                URI imageUrl = createUri("/static/buttons/9919.png");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
                         imageUrl,
-                        "My button sample",
-                        "Hello, my button",
+                        "My github site",
+                        "",
                         Arrays.asList(
-                                new URIAction("Go to line.me",
+                                new URIAction("Go to Eric's github",
                                               URI.create("https://github.com/ericlin03"), null)
                                 // new PostbackAction("Say hello1",
                                 //                    "hello こんにちは"),
@@ -597,7 +597,7 @@ public class KitchenSinkController {
                                 // new MessageAction("Say message",
                                 //                   "Rice=米")
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("Button alt text", buttonsTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("https://github.com/ericlin03", buttonsTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
