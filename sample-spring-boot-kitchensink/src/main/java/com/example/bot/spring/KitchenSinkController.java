@@ -606,7 +606,7 @@ public class KitchenSinkController {
                         Arrays.asList(
                                 new ImageCarouselColumn(CTBC,
                                                         new MessageAction("CTBC intern",
-                                                                          "Application Security Intern\n● Responsible for the black- and white-box testing of over 20 systems\n● Built environment of white-box testing, imported policy package\n● Updated policy package of black-box testing, recorded scripts of black-box testing\n● Pre-reviewed vulnerability of systems before online")
+                                                                          "App Security Intern\n● Responsible for the black- and white-box testing of over 20 systems\n● Built environment of white-box testing, imported policy package\n● Updated policy package of black-box testing, recorded scripts of black-box testing\n● Pre-reviewed vulnerability of systems before online")
                                                         // new PostbackAction("CTBC intern",
                                                         //                    "Security Intern",
                                                         //                    "Application Security Intern\n● Responsible for the black- and white-box testing of over 20 systems\n● Built environment of white-box testing, imported policy package\n● Updated policy package of black-box testing, recorded scripts of black-box testing\n● Pre-reviewed vulnerability of systems before online")
