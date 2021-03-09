@@ -501,18 +501,18 @@ public class KitchenSinkController {
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(imageUrl,
-                                                        new URIAction("Go to my github site",
-                                                                      URI.create("https://github.com/ericlin03"), null)
+                                                        new URIAction("Goto line.me",
+                                                                      URI.create("https://line.me"), null)
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                                        new MessageAction("Say message",
+                                                                          "Rice=米")
+                                ),
+                                new ImageCarouselColumn(imageUrl,
+                                                        new PostbackAction("言 hello2",
+                                                                           "hello こんにちは",
+                                                                           "hello こんにちは")
                                 )
-                                // new ImageCarouselColumn(imageUrl,
-                                //                         new MessageAction("Say message",
-                                //                                           "Rice=米")
-                                // ),
-                                // new ImageCarouselColumn(imageUrl,
-                                //                         new PostbackAction("言 hello2",
-                                //                                            "hello こんにちは",
-                                //                                            "hello こんにちは")
-                                // )
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
                                                                       imageCarouselTemplate);
