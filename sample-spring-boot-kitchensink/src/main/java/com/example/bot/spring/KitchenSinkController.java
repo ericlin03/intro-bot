@@ -605,7 +605,7 @@ public class KitchenSinkController {
                 break;
             }
             case "github": {
-                URI imageUrl = createUri("/static/icon/9919.png");
+                URI imageUrl = createUri("/static/buttons/9919.png");
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(imageUrl,
