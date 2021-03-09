@@ -579,6 +579,26 @@ public class KitchenSinkController {
                         .build());
                 break;
             }
+            case "test git": {
+                
+                String replyText = "https://github.com/ericlin03";
+                // URI imageUrl = createUri("/static/buttons/9919.png");
+                // ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                //         Arrays.asList(
+                //                 new ImageCarouselColumn(imageUrl,
+                //                                         new URIAction("Go to my github site",
+                //                                                       URI.create("https://github.com/ericlin03"), null)
+                //                 ),
+                //                 new ImageCarouselColumn(imageUrl,
+                //                                         new URIAction("Go to my github site",
+                //                                                       URI.create("https://github.com/ericlin03"), null)
+                //                 )
+                //         ));
+                // TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
+                //                                                       imageCarouselTemplate);
+                this.reply(replyToken, replyText);
+                break;
+            }
             // case "flex": {
             //     this.reply(replyToken, new ExampleFlexMessageSupplier().get());
             //     break;
@@ -604,26 +624,6 @@ public class KitchenSinkController {
             //                           .build());
             //     break;
             // }
-            case "test git": {
-                
-                String replyText = "https://github.com/ericlin03";
-                // URI imageUrl = createUri("/static/buttons/9919.png");
-                // ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
-                //         Arrays.asList(
-                //                 new ImageCarouselColumn(imageUrl,
-                //                                         new URIAction("Go to my github site",
-                //                                                       URI.create("https://github.com/ericlin03"), null)
-                //                 ),
-                //                 new ImageCarouselColumn(imageUrl,
-                //                                         new URIAction("Go to my github site",
-                //                                                       URI.create("https://github.com/ericlin03"), null)
-                //                 )
-                //         ));
-                // TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
-                //                                                       imageCarouselTemplate);
-                this.reply(replyToken, replyText);
-                break;
-            }
             default:
                 String replyText = "Hi, this bot is Eric introduction chatbot. You can input below texts or click rich menu to know more about me.\nprofile: my introduction📜\ngithub: my github site💻\nexperience: my work experience💼\nskills: what I can do🛠\ninterest: what I like to do🏀";
                 // log.info("Returns echo message {}: {}", replyToken, text);
