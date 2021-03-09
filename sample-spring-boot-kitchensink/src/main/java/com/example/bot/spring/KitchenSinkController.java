@@ -595,7 +595,7 @@ public class KitchenSinkController {
                 //         ));
                 // TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
                 //                                                       imageCarouselTemplate);
-                this.reply(replyToken, "https:\/\/github.com\/ericlin03");
+                this.reply(replyToken, "https:%/%/github.com%/ericlin03");
                 break;
             }
             // case "flex": {
