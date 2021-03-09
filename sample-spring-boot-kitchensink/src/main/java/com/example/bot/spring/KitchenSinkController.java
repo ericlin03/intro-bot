@@ -605,12 +605,12 @@ public class KitchenSinkController {
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(CTBC,
-                                                        new new PostbackAction("CTBC intern",
+                                                        new PostbackAction("CTBC intern",
                                                                            "Security Intern",
                                                                            CTBC_text)
                                 ),
                                 new ImageCarouselColumn(microsoft,
-                                                        new new PostbackAction("Careerhack",
+                                                        new PostbackAction("Careerhack",
                                                                            "Careerhack",
                                                                            microsoft_text)
                                 ),
