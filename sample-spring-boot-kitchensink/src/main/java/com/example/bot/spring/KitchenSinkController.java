@@ -526,27 +526,27 @@ public class KitchenSinkController {
                 //            final List<ImagemapAction> actions) {
                 this.reply(replyToken, ImagemapMessage
                         .builder()
-                        .baseUrl(createUri("/static/rich"))
+                        .baseUrl(createUri("/static/buttons/9919.png"))
                         .altText("This is alt text")
-                        .baseSize(new ImagemapBaseSize(1040, 1040))
-                        .actions(Arrays.asList(
+                        .baseSize(new ImagemapBaseSize(200, 200))
+                        .actions(
                                 URIImagemapAction.builder()
-                                                 .linkUri("https://store.line.me/family/manga/en")
-                                                 .area(new ImagemapArea(0, 0, 520, 520))
-                                                 .build(),
-                                URIImagemapAction.builder()
-                                                 .linkUri("https://store.line.me/family/music/en")
-                                                 .area(new ImagemapArea(520, 0, 520, 520))
-                                                 .build(),
-                                URIImagemapAction.builder()
-                                                 .linkUri("https://store.line.me/family/play/en")
-                                                 .area(new ImagemapArea(0, 520, 520, 520))
-                                                 .build(),
-                                MessageImagemapAction.builder()
-                                                     .text("URANAI!")
-                                                     .area(new ImagemapArea(520, 520, 520, 520))
-                                                     .build()
-                        ))
+                                                 .linkUri("https://github.com/ericlin03")
+                                                 .area(new ImagemapArea(0, 0, 200, 200))
+                                                 .build()
+                                // URIImagemapAction.builder()
+                                //                  .linkUri("https://store.line.me/family/music/en")
+                                //                  .area(new ImagemapArea(520, 0, 520, 520))
+                                //                  .build(),
+                                // URIImagemapAction.builder()
+                                //                  .linkUri("https://store.line.me/family/play/en")
+                                //                  .area(new ImagemapArea(0, 520, 520, 520))
+                                //                  .build(),
+                                // MessageImagemapAction.builder()
+                                //                      .text("URANAI!")
+                                //                      .area(new ImagemapArea(520, 520, 520, 520))
+                                //                      .build()
+                        )
                         .build());
                 break;
             }
@@ -613,8 +613,8 @@ public class KitchenSinkController {
                                                                       URI.create("https://github.com/ericlin03"), null)
                                 ),
                                 new ImageCarouselColumn(imageUrl,
-                                                        new MessageAction("Say message",
-                                                                          "Rice=米")
+                                                        new URIAction("Go to my heroku site",
+                                                                      URI.create("https://github.com/ericlin03"), null)
                                 )
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
