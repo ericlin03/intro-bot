@@ -526,27 +526,27 @@ public class KitchenSinkController {
                 //            final List<ImagemapAction> actions) {
                 this.reply(replyToken, ImagemapMessage
                         .builder()
-                        .baseUrl(createUri("/static/buttons/9919.png"))
+                        .baseUrl(createUri("/static/rich"))
                         .altText("This is alt text")
-                        .baseSize(new ImagemapBaseSize(200, 200))
-                        .actions(
+                        .baseSize(new ImagemapBaseSize(1040, 1040))
+                        .actions(Arrays.asList(
                                 URIImagemapAction.builder()
-                                                 .linkUri("https://github.com/ericlin03")
-                                                 .area(new ImagemapArea(0, 0, 200, 200))
-                                                 .build()
-                                // URIImagemapAction.builder()
-                                //                  .linkUri("https://store.line.me/family/music/en")
-                                //                  .area(new ImagemapArea(520, 0, 520, 520))
-                                //                  .build(),
-                                // URIImagemapAction.builder()
-                                //                  .linkUri("https://store.line.me/family/play/en")
-                                //                  .area(new ImagemapArea(0, 520, 520, 520))
-                                //                  .build(),
-                                // MessageImagemapAction.builder()
-                                //                      .text("URANAI!")
-                                //                      .area(new ImagemapArea(520, 520, 520, 520))
-                                //                      .build()
-                        )
+                                                 .linkUri("https://store.line.me/family/manga/en")
+                                                 .area(new ImagemapArea(0, 0, 520, 520))
+                                                 .build(),
+                                URIImagemapAction.builder()
+                                                 .linkUri("https://store.line.me/family/music/en")
+                                                 .area(new ImagemapArea(520, 0, 520, 520))
+                                                 .build(),
+                                URIImagemapAction.builder()
+                                                 .linkUri("https://store.line.me/family/play/en")
+                                                 .area(new ImagemapArea(0, 520, 520, 520))
+                                                 .build(),
+                                MessageImagemapAction.builder()
+                                                     .text("URANAI!")
+                                                     .area(new ImagemapArea(520, 520, 520, 520))
+                                                     .build()
+                        ))
                         .build());
                 break;
             }
@@ -605,21 +605,21 @@ public class KitchenSinkController {
                 break;
             }
             case "github": {
-                URI imageUrl = createUri("/static/buttons/9919.png");
-                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
-                        Arrays.asList(
-                                new ImageCarouselColumn(imageUrl,
-                                                        new URIAction("Go to my github site",
-                                                                      URI.create("https://github.com/ericlin03"), null)
-                                ),
-                                new ImageCarouselColumn(imageUrl,
-                                                        new URIAction("Go to my heroku site",
-                                                                      URI.create("https://github.com/ericlin03"), null)
-                                )
-                        ));
-                TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
-                                                                      imageCarouselTemplate);
-                this.reply(replyToken, templateMessage);
+                // URI imageUrl = createUri("/static/buttons/9919.png");
+                // ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                //         Arrays.asList(
+                //                 new ImageCarouselColumn(imageUrl,
+                //                                         new URIAction("Go to my github site",
+                //                                                       URI.create("https://github.com/ericlin03"), null)
+                //                 ),
+                //                 new ImageCarouselColumn(imageUrl,
+                //                                         new URIAction("Go to my github site",
+                //                                                       URI.create("https://github.com/ericlin03"), null)
+                //                 )
+                //         ));
+                // TemplateMessage templateMessage = new TemplateMessage("ImageCarousel alt text",
+                //                                                       imageCarouselTemplate);
+                this.reply(replyToken, "https://github.com/ericlin03");
                 break;
             }
             default:
