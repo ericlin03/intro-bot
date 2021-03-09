@@ -581,7 +581,7 @@ public class KitchenSinkController {
             }
             case "git test": {
                 // String replyText = "https://github.com/ericlin03";
-                URI imageUrl = createUri("/static/buttons/9919.png#");
+                URI imageUrl = createUri("/static/icon/github.jpg");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
                         imageUrl,
                         "My github site",
