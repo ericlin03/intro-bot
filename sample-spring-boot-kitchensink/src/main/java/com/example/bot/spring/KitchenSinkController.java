@@ -579,32 +579,32 @@ public class KitchenSinkController {
                         .build());
                 break;
             }
-            case "flex": {
-                this.reply(replyToken, new ExampleFlexMessageSupplier().get());
-                break;
-            }
-            case "quickreply": {
-                this.reply(replyToken, new MessageWithQuickReplySupplier().get());
-                break;
-            }
-            case "no_notify": {
-                this.reply(replyToken,
-                           singletonList(new TextMessage("This message is send without a push notification")),
-                           true);
-                break;
-            }
-            case "icon": {
-                this.reply(replyToken,
-                           TextMessage.builder()
-                                      .text("Hello, I'm cat! Meow~")
-                                      .sender(Sender.builder()
-                                                    .name("Cat")
-                                                    .iconUrl(createUri("/static/icon/cat.png"))
-                                                    .build())
-                                      .build());
-                break;
-            }
-            case "github": {
+            // case "flex": {
+            //     this.reply(replyToken, new ExampleFlexMessageSupplier().get());
+            //     break;
+            // }
+            // case "quickreply": {
+            //     this.reply(replyToken, new MessageWithQuickReplySupplier().get());
+            //     break;
+            // }
+            // case "no_notify": {
+            //     this.reply(replyToken,
+            //                singletonList(new TextMessage("This message is send without a push notification")),
+            //                true);
+            //     break;
+            // }
+            // case "icon": {
+            //     this.reply(replyToken,
+            //                TextMessage.builder()
+            //                           .text("Hello, I'm cat! Meow~")
+            //                           .sender(Sender.builder()
+            //                                         .name("Cat")
+            //                                         .iconUrl(createUri("/static/icon/cat.png"))
+            //                                         .build())
+            //                           .build());
+            //     break;
+            // }
+            case "test git": {
                 String replyText = "https://github.com/ericlin03";
                 // URI imageUrl = createUri("/static/buttons/9919.png");
                 // ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
