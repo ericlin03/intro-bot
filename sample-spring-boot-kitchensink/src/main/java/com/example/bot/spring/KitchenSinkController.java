@@ -496,7 +496,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "image_carousel": {
+            case "image_carousel": { //life photos
                 URI imageUrl = createUri("/static/buttons/1040.jpg");
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
@@ -580,7 +580,6 @@ public class KitchenSinkController {
                 break;
             }
             case "github": {
-                // String replyText = "https://github.com/ericlin03";
                 URI imageUrl = createUri("/static/buttons/9919.jpg");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
                         imageUrl,
@@ -589,15 +588,40 @@ public class KitchenSinkController {
                         Arrays.asList(
                                 new URIAction("Go to Eric's github",
                                               URI.create("https://github.com/ericlin03"), null)
-                                // new PostbackAction("Say hello1",
-                                //                    "hello こんにちは"),
-                                // new PostbackAction("言 hello2",
-                                //                    "hello こんにちは",
-                                //                    "hello こんにちは"),
-                                // new MessageAction("Say message",
-                                //                   "Rice=米")
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("My github: https://github.com/ericlin03", buttonsTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "experience": {
+                // Application Security Intern
+                URI CTBC = createUri("/static/buttons/CTBC.jpg");
+                URI microsoft = createUri("/static/buttons/microsoft.jpg");
+                URI fju = createUri("/static/buttons/FJU.jpg");
+                String CTBC_text = "Application Security Intern\n● Responsible for the black- and white-box testing of over 20 systems\n● Built environment of white-box testing, imported policy package\n● Updated policy package of black-box testing, recorded scripts of black-box testing\n● Pre-reviewed vulnerability of systems before online";
+                String microsoft_text = "2021 Microsoft & TSMC Careerhack\n● Be shortlisted for the final contest and built a online chatbot with Azure\n● Responsible for version control, Database, and application deployment";
+                String fju_text = "Blockchain Ticketing Platform and Payment Project\n● Built private blockchain with Ethereum\n● Wrote smart contract and deployed on blockchain with Solidity\n● Wrote API for website and blockchain with JavaScript"
+                
+                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                        Arrays.asList(
+                                new ImageCarouselColumn(CTBC,
+                                                        new new PostbackAction("CTBC intern",
+                                                                           "Security Intern",
+                                                                           CTBC_text)
+                                ),
+                                new ImageCarouselColumn(microsoft,
+                                                        new new PostbackAction("Careerhack",
+                                                                           "Careerhack",
+                                                                           microsoft_text)
+                                ),
+                                new ImageCarouselColumn(fju,
+                                                        new PostbackAction("FJU final project",
+                                                                           "Ticketing Platform",
+                                                                           fju_text)
+                                )
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("My work and project experience",
+                                                                      imageCarouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
@@ -613,17 +637,6 @@ public class KitchenSinkController {
             //     this.reply(replyToken,
             //                singletonList(new TextMessage("This message is send without a push notification")),
             //                true);
-            //     break;
-            // }
-            // case "icon": {
-            //     this.reply(replyToken,
-            //                TextMessage.builder()
-            //                           .text("Hello, I'm cat! Meow~")
-            //                           .sender(Sender.builder()
-            //                                         .name("Cat")
-            //                                         .iconUrl(createUri("/static/icon/cat.png"))
-            //                                         .build())
-            //                           .build());
             //     break;
             // }
             default:
