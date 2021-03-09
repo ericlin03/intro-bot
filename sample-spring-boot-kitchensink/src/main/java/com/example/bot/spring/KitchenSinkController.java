@@ -600,7 +600,7 @@ public class KitchenSinkController {
                 URI fju = createUri("/static/buttons/FJU.jpg");
                 String CTBC_text = "Application Security Intern\n● Responsible for the black- and white-box testing of over 20 systems\n● Built environment of white-box testing, imported policy package\n● Updated policy package of black-box testing, recorded scripts of black-box testing\n● Pre-reviewed vulnerability of systems before online";
                 String microsoft_text = "2021 Microsoft & TSMC Careerhack\n● Be shortlisted for the final contest and built a online chatbot with Azure\n● Responsible for version control, Database, and application deployment";
-                String fju_text = "Blockchain Ticketing Platform and Payment Project\n● Built private blockchain with Ethereum\n● Wrote smart contract and deployed on blockchain with Solidity\n● Wrote API for website and blockchain with JavaScript"
+                String fju_text = "Blockchain Ticketing Platform and Payment Project\n● Built private blockchain with Ethereum\n● Wrote smart contract and deployed on blockchain with Solidity\n● Wrote API for website and blockchain with JavaScript";
                 
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
