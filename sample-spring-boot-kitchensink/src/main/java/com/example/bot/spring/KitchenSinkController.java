@@ -598,7 +598,7 @@ public class KitchenSinkController {
                                                     .build())
                                       .build());
                 break;
-            case "github" || "Github":
+            case "github":
                 URI imageUrl = createUri("/static/icon/github.png");
                 // this.reply(replyToken, imageUrl);
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
