@@ -603,16 +603,10 @@ public class KitchenSinkController {
                                 new ImageCarouselColumn(CTBC,
                                                         new MessageAction("CTBC intern",
                                                                           "App Security Intern\n● Responsible for the black- and white-box testing of over 20 systems\n● Built environment of white-box testing, imported policy package\n● Updated policy package of black-box testing, recorded scripts of black-box testing\n● Pre-reviewed vulnerability of systems before online")
-                                                        // new PostbackAction("CTBC intern",
-                                                        //                    "Security Intern",
-                                                        //                    "Application Security Intern\n● Responsible for the black- and white-box testing of over 20 systems\n● Built environment of white-box testing, imported policy package\n● Updated policy package of black-box testing, recorded scripts of black-box testing\n● Pre-reviewed vulnerability of systems before online")
                                 ),
                                 new ImageCarouselColumn(microsoft,
                                                         new MessageAction("Careerhack",
                                                                           "2021 Microsoft & TSMC Careerhack\n● Be shortlisted for the final contest and built a online chatbot with Azure\n● Responsible for version control, Database, and application deployment")
-                                                        // new PostbackAction("Careerhack",
-                                                        //                    "Careerhack",
-                                                        //                    "2021 Microsoft & TSMC Careerhack\n● Be shortlisted for the final contest and built a online chatbot with Azure\n● Responsible for version control, Database, and application deployment")
                                 ),
                                 new ImageCarouselColumn(fju,
                                                         new MessageAction("FJU project",
@@ -622,6 +616,14 @@ public class KitchenSinkController {
                 TemplateMessage templateMessage = new TemplateMessage("My work and project experience",
                                                                       imageCarouselTemplate);
                 this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "skills": {
+                String replyText = "My skills\n● Programming Languages: Python; JavaScript; Java; PHP; SQL\n● Programming Framework: Laravel; Django\n● Languages: TOEIC 855 (Reading 395 / Listening 460); Mandarin Chinese\n";
+                this.replyText(
+                    replyToken,
+                    replyText
+                );
                 break;
             }
             // case "flex": {
@@ -639,7 +641,7 @@ public class KitchenSinkController {
             //     break;
             // }
             case "how to use": {
-                String replyText = "Hi, this bot is Eric introduction chatbot. You can input below texts or click rich menu to know more about me.\nprofile: my introduction📜\ngithub: my github site💻\nexperience: my work experience💼\nskills: what I can do🛠\ninterest: what I like to do🏀";
+                String replyText = "Hi, this bot is Eric introduction chatbot. You can input below texts or click rich menu to know more about me.\n📜profile: my introduction\n💻github: my github site\n💼experience: my work experience\n🛠skills: what I can do\n🏀interest: what I like to do";
                 // log.info("Returns echo message {}: {}", replyToken, text);
                 this.replyText(
                         replyToken,
