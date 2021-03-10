@@ -382,15 +382,15 @@ public class KitchenSinkController {
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(CTBC,
-                                                        new MessageAction("CTBC intern",
+                                                        new PostbackAction("CTBC intern",
                                                                           "App Security Intern\n● Responsible for the black- and white-box testing of over 20 systems\n● Built environment of white-box testing, imported policy package\n● Updated policy package of black-box testing, recorded scripts of black-box testing\n● Pre-reviewed vulnerability of systems before online")
                                 ),
                                 new ImageCarouselColumn(microsoft,
-                                                        new MessageAction("Careerhack",
+                                                        new PostbackAction("Careerhack",
                                                                           "2021 Microsoft & TSMC Careerhack\n● Be shortlisted for the final contest and built a online chatbot with Azure\n● Responsible for version control, Database, and application deployment")
                                 ),
                                 new ImageCarouselColumn(fju,
-                                                        new MessageAction("FJU project",
+                                                        new PostbackAction("FJU project",
                                                                           "Blockchain Ticketing Platform and Payment Project\n● Built private blockchain with Ethereum\n● Wrote smart contract and deployed on blockchain with Solidity\n● Wrote API for website and blockchain with JavaScript")
                                 )
                         ));
@@ -424,15 +424,15 @@ public class KitchenSinkController {
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(trip,
-                                                        new MessageAction("Yilan Trip",
+                                                        new PostbackAction("Yilan Trip",
                                                                           flying_umbrella)
                                 ),
                                 new ImageCarouselColumn(tainan,
-                                                        new MessageAction("Tainan Trip",
+                                                        new PostbackAction("Tainan Trip",
                                                                           "This picture was taken in Tainan Museum!!!")
                                 ),
                                 new ImageCarouselColumn(careerhack,
-                                                        new MessageAction("careerhack",
+                                                        new PostbackAction("careerhack",
                                                                           "Hack day in Microsoft Office")
                                 )
                         ));
