@@ -419,14 +419,13 @@ public class KitchenSinkController {
                 URI careerhack = createUri("/static/buttons/S__16416863.jpg");
                 URI trip = createUri("/static/buttons/S__16416865.jpg");
                 URI tainan = createUri("/static/buttons/S__16416866.jpg");
-                URI flying_umbrella = createUri("https://reurl.cc/jqQ0Dn");
+                String flying_umbrella = "https://reurl.cc/jqQ0Dn";
                 
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(trip,
-                                                        new URIAction("Yilan Trip",
-                                                                      flying_umbrella,
-                                                                      null)
+                                                        new MessageAction("Yilan Trip",
+                                                                          flying_umbrella,)
                                 ),
                                 new ImageCarouselColumn(tainan,
                                                         new MessageAction("Tainan Trip",
