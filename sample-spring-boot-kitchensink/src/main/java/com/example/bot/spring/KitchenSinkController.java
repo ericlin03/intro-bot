@@ -584,7 +584,7 @@ public class KitchenSinkController {
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
                         imageUrl,
                         "My github site",
-                        "   ",
+                        "ericlin03",
                         Arrays.asList(
                                 new URIAction("Go to Eric's github",
                                               URI.create("https://github.com/ericlin03"), null)
@@ -619,7 +619,15 @@ public class KitchenSinkController {
                 break;
             }
             case "skills": {
-                String replyText = "My skills\n● Programming Languages: Python; JavaScript; Java; PHP; SQL\n● Programming Framework: Laravel; Django\n● Languages: TOEIC 855 (Reading 395 / Listening 460); Mandarin Chinese\n";
+                String replyText = "🛠My skills:\n● Programming Languages: Python; JavaScript; Java; PHP; SQL\n● Programming Framework: Laravel; Django\n● Languages: TOEIC 855 (Reading 395 / Listening 460); Mandarin Chinese\n";
+                this.replyText(
+                    replyToken,
+                    replyText
+                );
+                break;
+            }
+            case "interests": {
+                String replyText = "🎭My interests:\n● Basketball🏀\n● Travelling✈\n● Movies🎥\n● Workout🔩";
                 this.replyText(
                     replyToken,
                     replyText
@@ -641,7 +649,7 @@ public class KitchenSinkController {
             //     break;
             // }
             case "how to use": {
-                String replyText = "Hi, this bot is Eric introduction chatbot. You can input below texts or click rich menu to know more about me.\n📜profile: my introduction\n💻github: my github site\n💼experience: my work experience\n🛠skills: what I can do\n🏀interest: what I like to do";
+                String replyText = "Hi, this bot is Eric introduction chatbot. You can input below texts or click rich menu to know more about me.\n📜profile: my introduction\n💻github: my github site\n💼experience: my work experience\n🛠skills: what I can do\n🎭interest: what I like to do";
                 // log.info("Returns echo message {}: {}", replyToken, text);
                 this.replyText(
                         replyToken,
