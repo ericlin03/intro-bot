@@ -389,12 +389,12 @@ public class KitchenSinkController {
                                 new ImageCarouselColumn(microsoft,
                                                         new PostbackAction("Careerhack",
                                                                           "Careerhack",
-                                                                          "2021 Microsoft & TSMC Careerhack\n● Be shortlisted for the final contest and built a online chatbot with Azure\n● Responsible for version control, Database, and application deployment")
+                                                                          "Careerhack")
                                 ),
                                 new ImageCarouselColumn(fju,
                                                         new PostbackAction("FJU project",
                                                                           "FJU project",
-                                                                          "Blockchain Ticketing Platform and Payment Project\n● Built private blockchain with Ethereum\n● Wrote smart contract and deployed on blockchain with Solidity\n● Wrote API for website and blockchain with JavaScript")
+                                                                          "FJU project")
                                 )
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("My work and project experience",
@@ -422,24 +422,24 @@ public class KitchenSinkController {
                 URI careerhack = createUri("/static/buttons/S__16416863.jpg");
                 URI trip = createUri("/static/buttons/S__16416865.jpg");
                 URI tainan = createUri("/static/buttons/S__16416866.jpg");
-                String flying_umbrella = "https://reurl.cc/jqQ0Dn";
+                // String flying_umbrella = "https://reurl.cc/jqQ0Dn";
                 
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(trip,
                                                         new PostbackAction("Yilan Trip",
                                                                           "Yilan Trip",
-                                                                          flying_umbrella)
+                                                                          "Yilan Trip")
                                 ),
                                 new ImageCarouselColumn(tainan,
                                                         new PostbackAction("Tainan Trip",
                                                                           "Tainan Trip",
-                                                                          "This picture was taken in Tainan Museum!!!")
+                                                                          "Tainan Trip")
                                 ),
                                 new ImageCarouselColumn(careerhack,
-                                                        new PostbackAction("Careerhack",
-                                                                          "Careerhack",
-                                                                          "Hack day in Microsoft Office")
+                                                        new PostbackAction("hackday",
+                                                                          "hackday",
+                                                                          "hackday")
                                 )
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("My life photos",
@@ -461,7 +461,59 @@ public class KitchenSinkController {
                         // interests: 平常的興趣"
                 );
                 break;
-            }  
+            }
+
+            // experience reply
+            case "Careerhack" :{
+                String replyText = "2021 Microsoft & TSMC Careerhack\n● Be shortlisted for the final contest and built a online chatbot with Azure\n● Responsible for version control, Database, and application deployment";
+                this.replyText(
+                        replyToken,
+                        replyText
+                );
+                break;
+            }
+            case "CTBC intern" :{
+                String replyText = "App Security Intern\n● Responsible for the black- and white-box testing of over 20 systems\n● Built environment of white-box testing, imported policy package\n● Updated policy package of black-box testing, recorded scripts of black-box testing\n● Pre-reviewed vulnerability of systems before online";
+                this.replyText(
+                        replyToken,
+                        replyText
+                );
+                break;
+            }
+            case "FJU project": {
+                String replyText = "Blockchain Ticketing Platform and Payment Project\n● Built private blockchain with Ethereum\n● Wrote smart contract and deployed on blockchain with Solidity\n● Wrote API for website and blockchain with JavaScript";
+                this.replyText(
+                        replyToken,
+                        replyText
+                );
+                break;
+            }
+            
+            // life photo reply
+            case "Yilan Trip" :{
+                String replyText = "https://reurl.cc/jqQ0Dn";
+                this.replyText(
+                        replyToken,
+                        replyText
+                );
+                break;
+            }
+            case "Tainan Trip" :{
+                String replyText = "This picture was taken in Tainan Museum";
+                this.replyText(
+                        replyToken,
+                        replyText
+                );
+                break;
+            }
+            case "hackday": {
+                String replyText = "Hack day in Microsoft Office";
+                this.replyText(
+                        replyToken,
+                        replyText
+                );
+                break;
+            }
         }
     }
 
