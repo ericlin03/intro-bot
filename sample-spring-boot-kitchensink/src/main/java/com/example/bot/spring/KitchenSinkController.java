@@ -514,6 +514,15 @@ public class KitchenSinkController {
                 );
                 break;
             }
+
+            default: {
+                String replyText = "Sorry, I cannot understand what you said. Please input 'how to use'!!!";
+                this.replyText(
+                        replyToken,
+                        replyText
+                );
+                break;
+            }
         }
     }
 
