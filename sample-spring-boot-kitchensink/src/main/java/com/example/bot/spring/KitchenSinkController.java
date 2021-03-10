@@ -447,7 +447,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            default: {
+            case "how to use": {
                 String replyText = "Hi, this bot is Eric introduction chatbot. You can input below texts or click rich menu to know more about me.\n📜profile: my introduction\n💻github: my github site\n💼experience: my work experience\n🛠skills: what I can do\n🎭interests: what I like to do\n🖼life photo: how I enjoy life";
                 // log.info("Returns echo message {}: {}", replyToken, text);
                 this.replyText(
