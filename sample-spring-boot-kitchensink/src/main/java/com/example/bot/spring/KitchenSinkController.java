@@ -384,7 +384,7 @@ public class KitchenSinkController {
                                 new ImageCarouselColumn(CTBC,
                                                         new PostbackAction("CTBC intern",
                                                                           "CTBC intern",
-                                                                          "App Security Intern\n● Responsible for the black- and white-box testing of over 20 systems\n● Built environment of white-box testing, imported policy package\n● Updated policy package of black-box testing, recorded scripts of black-box testing\n● Pre-reviewed vulnerability of systems before online")
+                                                                          "CTBC intern")
                                 ),
                                 new ImageCarouselColumn(microsoft,
                                                         new PostbackAction("Careerhack",
