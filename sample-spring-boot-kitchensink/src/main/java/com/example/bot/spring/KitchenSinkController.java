@@ -473,7 +473,7 @@ public class KitchenSinkController {
                 break;
             }
             case "CTBC intern" :{
-                String replyText = "App Security Intern\n● Responsible for the black- and white-box testing of over 20 systems\n● Built environment of white-box testing, imported policy package\n● Updated policy package of black-box testing, recorded scripts of black-box testing\n● Pre-reviewed vulnerability of systems before online";
+                String replyText = "App Security Intern\n● Responsible for the black-box and white-box testing of over 20 systems\n● Built environment of white-box testing, imported policy package\n● Updated policy package of black-box testing, recorded scripts of black-box testing\n● Pre-reviewed vulnerability of systems before online";
                 this.replyText(
                         replyToken,
                         replyText
