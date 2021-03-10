@@ -425,6 +425,7 @@ public class KitchenSinkController {
                         Arrays.asList(
                                 new ImageCarouselColumn(trip,
                                                         new PostbackAction("Yilan Trip",
+                                                                          "test"
                                                                           flying_umbrella)
                                 ),
                                 new ImageCarouselColumn(tainan,
@@ -432,7 +433,7 @@ public class KitchenSinkController {
                                                                           "This picture was taken in Tainan Museum!!!")
                                 ),
                                 new ImageCarouselColumn(careerhack,
-                                                        new PostbackAction("careerhack",
+                                                        new PostbackAction("Careerhack",
                                                                           "Hack day in Microsoft Office")
                                 )
                         ));
