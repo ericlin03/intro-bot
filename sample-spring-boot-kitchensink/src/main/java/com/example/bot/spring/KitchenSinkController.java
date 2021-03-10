@@ -425,7 +425,7 @@ public class KitchenSinkController {
                         Arrays.asList(
                                 new ImageCarouselColumn(trip,
                                                         new MessageAction("Yilan Trip",
-                                                                          flying_umbrella,)
+                                                                          flying_umbrella)
                                 ),
                                 new ImageCarouselColumn(tainan,
                                                         new MessageAction("Tainan Trip",
