@@ -642,12 +642,12 @@ public class KitchenSinkController {
                 ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
                         Arrays.asList(
                                 new ImageCarouselColumn(trip,
-                                                        new MessageAction("Flying Umbrella",
-                                                                          "666")
+                                                        new MessageAction("Yilan Trip",
+                                                                          "Taking on gears before flying umbrella!!!")
                                 ),
                                 new ImageCarouselColumn(tainan,
                                                         new MessageAction("Tainan Trip",
-                                                                          "This picture was taken in Tainan Museum.")
+                                                                          "This picture was taken in Tainan Museum!!!")
                                 ),
                                 new ImageCarouselColumn(careerhack,
                                                         new MessageAction("careerhack",
