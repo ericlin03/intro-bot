@@ -634,6 +634,31 @@ public class KitchenSinkController {
                 );
                 break;
             }
+            case "life photo":{
+                URI careerhack = createUri("/static/buttons/S__16416863.jpg");
+                URI trip = createUri("/static/buttons/S__16416865.jpg");
+                URI tainan = createUri("/static/buttons/S__16416866.jpg");
+                
+                ImageCarouselTemplate imageCarouselTemplate = new ImageCarouselTemplate(
+                        Arrays.asList(
+                                new ImageCarouselColumn(trip,
+                                                        new MessageAction("Flying Umbrella",
+                                                                          "666")
+                                ),
+                                new ImageCarouselColumn(tainan,
+                                                        new MessageAction("Tainan Trip",
+                                                                          "This picture was taken in Tainan Museum.")
+                                ),
+                                new ImageCarouselColumn(careerhack,
+                                                        new MessageAction("careerhack",
+                                                                          "Hack day in Microsoft Office")
+                                )
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("My life photos",
+                                                                      imageCarouselTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
             // case "flex": {
             //     this.reply(replyToken, new ExampleFlexMessageSupplier().get());
             //     break;
@@ -648,8 +673,8 @@ public class KitchenSinkController {
             //                true);
             //     break;
             // }
-            case "how to use": {
-                String replyText = "Hi, this bot is Eric introduction chatbot. You can input below texts or click rich menu to know more about me.\n📜profile: my introduction\n💻github: my github site\n💼experience: my work experience\n🛠skills: what I can do\n🎭interest: what I like to do";
+            default: {
+                String replyText = "Hi, this bot is Eric introduction chatbot. You can input below texts or click rich menu to know more about me.\n📜profile: my introduction\n💻github: my github site\n💼experience: my work experience\n🛠skills: what I can do\n🎭interests: what I like to do\n🖼life photo: how I enjoy life";
                 // log.info("Returns echo message {}: {}", replyToken, text);
                 this.replyText(
                         replyToken,
